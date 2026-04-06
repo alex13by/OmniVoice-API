@@ -20,6 +20,9 @@ build/
 /download
 /local/
 /run*
+models/
+saved_voices/
+api_config.json
 example.py
 results/
 examples/data*
