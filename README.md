@@ -37,6 +37,22 @@ OmniVoice is a state-of-the-art massive multilingual zero-shot text-to-speech (T
 - **OpenAI API**：兼容 AnythingLLM 等工具,可以选择克隆音色作为API的默认音色
 - **模型共享**：Web UI 和 API 共用模型，节省内存
 ---
+## uv安装
+
+克隆仓库并创建环境
+
+```bash
+git clone https://github.com/alex13by/OmniVoice-API.git
+cd OmniVoice-API
+uv sync
+```
+---
+
+## Quick Start
+运行start_full.bat会自动下载模型到当前位置modems目录下，直到看到：
+INFO:     Uvicorn running on http://0.0.0.0:5050 (Press CTRL+C to quit)
+* Running on local URL:  http://0.0.0.0:8001
+---
 ## AnythingLLM 配置
 
 1. 设置 → Voice & Speech → TTS Provider: **Generic OpenAI**
@@ -47,30 +63,6 @@ OmniVoice is a state-of-the-art massive multilingual zero-shot text-to-speech (T
    - **Voice**: `alloy` 或描述如 `female, low pitch`
 ---
 uv run python omnivoice_full_server.py --web_port 8080 --api_port 5051
-
-## Installation
-
-### uv
-
-Clone the repository and sync dependencies:
-
-```bash
-git clone https://github.com/alex13by/OmniVoice-API.git
-cd OmniVoice-API
-uv sync
-```
----
-
-## Quick Start
-
-```bash
-# 自定义端口
-uv run python omnivoice_full_server.py --web_port 8080 --api_port 5051
-
-# 创建公开链接（Gradio）
-uv run python omnivoice_full_server.py --share
-```
----
 
 ## Citation
 
